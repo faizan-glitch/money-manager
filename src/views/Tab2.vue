@@ -12,17 +12,29 @@
         </ion-toolbar>
       </ion-header>
       
-      <ExploreContainer name="Tab 2 page" />
+      <Child price="30$"/>
+      <Child price="50$"/>
+      <Child price="80$"/>
+      
+      <!-- <ExploreContainer name="Tab 2 page" /> -->
     </ion-content>
   </ion-page>
 </template>
 
-<script lang="ts">
+<script >
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
-
+// import ExploreContainer from '@/components/ExploreContainer.vue';
+import Child from '@/components/Child.vue'
 export default  {
   name: 'Tab2',
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
+  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, Child },
+  data() {
+    return {
+      user: {
+        id: 1,
+        name: 'faizan'
+      }
+    }
+  }
 }
 </script>
